@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container main">
+    <div class="row">
+        <div class="col-lg-5">
+            <img src="~/Content/Images/baby-home.jpg" /><p>
+        </div>
+        <div class="col-lg-7 col-pad">
+            <h1>Checklist of baby essentials: getting ready for your newborn</h1>
+            <p class="description">
+                When it comes to preparing for the arrival of your new baby, there are lots of things to consider, from choosing the cutest clothes and buying cosy sleeping bags to researching handy feeding accessories.
+                This application has selected some new baby essentials to help you get everything you need to welcome your little one into the world.
+            </p>
+        </div>
+    </div>
+</div>
+<p class="button">
+    @Html.ActionLink("Start", "Index", "Checklists", null, new { @class = "btn btn-primary btn-lg outline" })
+</p>

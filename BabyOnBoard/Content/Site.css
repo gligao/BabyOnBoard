@@ -1,0 +1,136 @@
+﻿/* Set background image and color, position background so that the navigation bar blends in */
+/* Set botton and top padding, set the default font */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: rgb(26,224,224);
+    background-image: url("../Content/images/bckgrnd.jpg");
+    background-repeat: repeat-x;
+    background-position-y: 50px;
+    font-family: 'Comic Sans MS';
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set font, color and top padding for header 1 */
+h1 {
+    font-family: 'Comic Sans MS';
+    color: rgb(66, 139, 202);
+    padding-top: 10px;
+}
+
+/* Set font and color for header 2 */
+h2 {
+    font-family: 'Comic Sans MS';
+    color: rgb(66, 139, 202);
+}
+
+/* Default font for paragraphs */
+p {
+    font-family: 'Comic Sans MS';
+}
+
+/* Set font size and top padding for a description paragraph */
+p.description {
+    font-size: 20px;
+    padding-top: 50px;
+}
+
+/* Set top and botton padding for start button */
+p.button {
+    padding: 50px 0px 50px 0px;
+    text-align: center;
+
+}
+
+/* Set font size, top and bottom padding for a different description paragraph */
+p.additional-description {
+    font-size: 20px;
+    padding: 20px 0px 50px 0px;
+}
+
+/* Set font size for a question paragraph when deleting a record */
+p.question {
+    font-size: 18px;
+}
+
+/* Set the alignement for the main container in Home view */
+.main {
+    background-color: white;
+    text-align: center;
+}
+
+/* Set navigation bar color and font size */
+.navbar {
+    background-color: white;
+    font-size: 18px;
+}
+
+/* Set font size on navigation brand and dispose outline border when clicked */
+.navbar-brand, .navbar-brand:hover, .navbar-brand:focus {
+    font-size: 22px;
+    outline: none;
+}
+
+/* Set navigation list background color on hover and focus and dispose outline border when clicked */
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: rgb(223, 255, 254);
+    outline: none;
+}
+
+/* Set the color of the collapsed menu lines */
+.line {
+    background-color: rgb(66, 139, 202);
+}
+
+/* Dispose outline border when a button is clicked */
+.outline:focus, .outline:hover {
+    outline: none;
+}
+
+/* Set padding on first page right column */
+.col-pad {
+    padding-right: 20px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Set styles for like and dislike buttons */
+.thumbs {
+    font-size: 20px;
+    color: rgb(0, 119, 172);
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    padding-left: 0px;
+}
+
+/* Dispose border when hovering over like and dislike buttons */
+.thumbs:hover {
+    text-decoration:none;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column */
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set top and bottom padding for action buttons */
+.actions {
+    padding: 20px 0px 10px 0px;
+}
+
+/* Set font for table elements */
+.table {
+    font-size: 15px;
+}

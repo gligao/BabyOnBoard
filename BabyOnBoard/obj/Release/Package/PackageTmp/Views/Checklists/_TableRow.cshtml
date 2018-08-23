@@ -1,0 +1,69 @@
+﻿@model BabyOnBoard.Models.Checklist
+
+<tr id="@Model.ChecklistId">
+    <td>
+        <img src="@Html.DisplayFor(modelItem => Model.Picture)" height="100" width="100" alt="@Model.Picture" />
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => Model.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => Model.Type)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => Model.Brand)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => Model.Condition)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => Model.Price)
+    </td>
+    <td>
+        <div class="row">
+            <div class="col-xs-6">
+                @Html.DisplayFor(modelItem => Model.Likes)
+            </div>
+            <div class="col-xs-6">
+                @Html.DisplayFor(modelItem => Model.Dislikes)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                @using (Ajax.BeginForm(
+                                        actionName: "_Like",
+                                        controllerName: "Checklists",
+                                        routeValues: new { id = Model.ChecklistId },
+                                        ajaxOptions: new AjaxOptions
+                                        {
+                                            UpdateTargetId = Model.ChecklistId.ToString(),
+                                            InsertionMode = InsertionMode.ReplaceWith
+                                        }
+                                ))
+                {
+                    <input id="likeButton" type="submit" value="&#xe125;" class="glyphicon glyphicon-thumbs-up thumbs">
+                }
+            </div>
+            <div class="col-xs-6">
+                @using (Ajax.BeginForm(
+                                       actionName: "_Dislike",
+                                       controllerName: "Checklists",
+                                       routeValues: new { id = Model.ChecklistId },
+                                       ajaxOptions: new AjaxOptions
+                                       {
+                                           UpdateTargetId = Model.ChecklistId.ToString(),
+                                           InsertionMode = InsertionMode.ReplaceWith
+                                       }
+                               ))
+                {
+                    <input id="dislikeButton" type="submit" value="&#xe126;" class="glyphicon glyphicon-thumbs-down thumbs">
+                }
+            </div>
+        </div>
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ChecklistId }) |
+        @Html.ActionLink("Details", "Details", new { id = Model.ChecklistId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = Model.ChecklistId })
+    </td>
+</tr>

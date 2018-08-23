@@ -1,0 +1,55 @@
+﻿@model IEnumerable<BabyOnBoard.Models.Checklist>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("Index", "Checklists", FormMethod.Get))
+{
+<div class="container actions">
+    <div class="row">
+        <div class="col-lg-5">
+            @Html.ActionLink("Add new product", "Create", null, new { @class = "btn btn-default outline" })
+            @Html.ActionLink("Sort by Name", "Index", new { sortOrder = ViewBag.NameSortParameter }, new { @class = "btn btn-default outline" })
+            @Html.ActionLink("Sort by Likes", "Index", new { sortOrder = ViewBag.LikesSortParameter }, new { @class = "btn btn-default outline" })
+        </div>
+        <div class="col-lg-5 col-lg-offset-2">
+            Type: @Html.DropDownList("productType", "All")
+            Name: @Html.TextBox("SearchName")
+            <input type="submit" value="Search" class="btn btn-default outline" />
+        </div>
+    </div>
+</div>
+}
+
+<table class="table">
+    <tr>
+        <th>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Brand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Condition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            Ratings
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        @Html.Action("_TableRow", new { id = item.ChecklistId })
+    }
+
+</table>

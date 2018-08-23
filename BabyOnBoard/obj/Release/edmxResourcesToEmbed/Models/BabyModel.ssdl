@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BabyOnBoardDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Checklist">
+    <Key>
+      <PropertyRef Name="ChecklistId" />
+    </Key>
+    <Property Name="ChecklistId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Picture" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="20" />
+    <Property Name="Condition" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Likes" Type="int" />
+    <Property Name="Dislikes" Type="int" />
+  </EntityType>
+  <EntityContainer Name="BabyOnBoardDataModelStoreContainer">
+    <EntitySet Name="Checklist" EntityType="Self.Checklist" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
