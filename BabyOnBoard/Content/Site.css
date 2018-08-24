@@ -134,3 +134,9 @@ textarea {
 .table {
     font-size: 15px;
 }
+
+/* Set images to shrink on extra small screens */
+.image-shrink {
+    max-width: 100%;
+    height: auto;
+}
