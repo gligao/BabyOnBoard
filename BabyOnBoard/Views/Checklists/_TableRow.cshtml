@@ -41,7 +41,10 @@
                                         }
                                 ))
                 {
-                    <input id="likeButton" type="submit" value="&#xe125;" class="glyphicon glyphicon-thumbs-up thumbs">
+                    if (ViewBag.test == 0)
+                    {
+                        <input id="likeButton" type="submit" value="&#xe125;" class="glyphicon glyphicon-thumbs-up thumbs">
+                    }
                 }
             </div>
             <div class="col-xs-6">
@@ -56,7 +59,10 @@
                                        }
                                ))
                 {
-                    <input id="dislikeButton" type="submit" value="&#xe126;" class="glyphicon glyphicon-thumbs-down thumbs">
+                    if (ViewBag.test == 0)
+                    {
+                        <input id="dislikeButton" type="submit" value="&#xe126;" class="glyphicon glyphicon-thumbs-down thumbs">
+                    }
                 }
             </div>
         </div>
