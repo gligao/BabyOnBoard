@@ -227,6 +227,8 @@ namespace BabyOnBoard.Controllers
                 return HttpNotFound();
             }
 
+            ViewBag.test = 0;
+
             return PartialView(product);
 
         }
@@ -257,6 +259,8 @@ namespace BabyOnBoard.Controllers
 
             product = db.Checklists.Find(id);
 
+            ViewBag.test = 1;
+
             return PartialView("_TableRow", product);
 
         }
@@ -286,6 +290,8 @@ namespace BabyOnBoard.Controllers
             }
 
             product = db.Checklists.Find(id);
+
+            ViewBag.test = 1;
 
             return PartialView("_TableRow", product);
 
